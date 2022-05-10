@@ -3,7 +3,7 @@ version: '3'
 services:
     laravel.test:
         build:
-            context: ./vendor/laravel/sail/runtimes/8.1
+            context: ./docker/8.1
             dockerfile: Dockerfile
             args:
                 WWWGROUP: '${WWWGROUP}'
@@ -77,8 +77,8 @@ services:
         networks:
             - sail
     selenium:
-#        image: 'selenium/standalone-chrome'
-        image: 'seleniarm/standalone-chromium'
+        image: 'selenium/standalone-chrome'
+#        image: 'seleniarm/standalone-chromium' ## use this image if you are running a mac using Apple Silicon
         volumes:
             - '/dev/shm:/dev/shm'
         networks:

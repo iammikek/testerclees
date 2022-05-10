@@ -68,3 +68,10 @@ Installation:
 
 This project requires docker. 
 - run `docker compose up` - to start project 
+
+- add alias for sail to bash
+
+`alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'`
+
+## Documentation
+- https://github.com/laracasts/cypress
