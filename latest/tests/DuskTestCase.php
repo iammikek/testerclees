@@ -33,10 +33,13 @@ abstract class DuskTestCase extends BaseTestCase
     {
         $options = (new ChromeOptions)->addArguments(collect([
             '--window-size=1920,1080',
+            '--disable-dev-shm-usage',
         ])->unless($this->hasHeadlessDisabled(), function ($items) {
             return $items->merge([
                 '--disable-gpu',
                 '--headless',
+                '--ignore-ssl-errors',
+                '--whitelisted-ips=""',
             ]);
         })->all());
 
