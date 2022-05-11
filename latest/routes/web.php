@@ -13,17 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('foo', function () {
-
-    $result = ['foo', 'bar', 'baz'];
-
-    return $result;
-});
-
 Route::get('/', function () {
-
-    dump('foo');
-
-
     return view('welcome');
 });
